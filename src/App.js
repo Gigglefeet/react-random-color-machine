@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Box from './Box.js';
+
+const randomColor = require('randomcolor');
+
+// A random color generated inside a box inside a button.
 
 function App() {
+  const [myColor, setRandomColor] = useState(randomColor);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box background={myColor} text="The" />
+      <Box background={myColor} text="Rain" />
+      <Box background={myColor} text="Bow" />
+      <button
+        onClick={() => {
+          setRandomColor(randomColor);
+        }}
+      >
+        Rainbow Maker
+      </button>
+
+      <p>
+        <button>Color of the Rainbow</button> {myColor}
+        <button>
+          {/* <AwesomeButton type="primary">Rainbow</AwesomeButton> */}
+        </button>
+      </p>
     </div>
   );
 }

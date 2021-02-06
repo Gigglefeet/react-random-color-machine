@@ -1,4 +1,5 @@
 .App {
+  /* Makes sure the text is in the middle like it should be */
   text-align: center;
 }
 
@@ -14,13 +15,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2d3441;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(100px + 2vmin);
   color: white;
 }
 
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  width: 100vw;
+  /* Ekki gleyma að henda þessu út hér að neðan  */
+  border: solid 1px;
 }
